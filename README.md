@@ -76,12 +76,36 @@ The demo walks through four parts:
 
 The demo is self-contained — pre-recorded output, no external dependencies. Press ENTER to advance each step.
 
+## Using with OpenCode
+
+Gondolin also ships with [OpenCode](https://opencode.ai) commands in `.opencode/commands/`. To use them:
+
+1. **Install OpenCode** (if you haven't already):
+   ```
+   brew install anomalyco/tap/opencode   # macOS/Linux
+   npm i -g opencode-ai@latest           # or via npm
+   ```
+
+2. **Launch OpenCode from the repo root:**
+   ```
+   cd gondolin
+   opencode
+   ```
+
+3. **Run the commands:**
+   ```
+   /gondolin managed1 /tmp/hub-kubeconfig
+   /fall-of-gondolin managed1 /tmp/hub-kubeconfig
+   ```
+
+OpenCode picks up the commands automatically from `.opencode/commands/`. No additional configuration is needed.
+
 ## Prerequisites
 
 - Kubernetes 1.30+ (ValidatingAdmissionPolicy GA)
 - `ManifestWorkReplicaSet` feature gate enabled on the ClusterManager
 - `kubectl` and `jq` available on the CLI
-- Claude Code running from this directory (for skill access)
+- An AI coding agent running from this directory — either [Claude Code](https://docs.anthropic.com/en/docs/claude-code) or [OpenCode](https://opencode.ai)
 
 ## Compatibility
 
