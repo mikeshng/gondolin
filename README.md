@@ -4,7 +4,7 @@
 
 ## What is this?
 
-Gondolin brings the concept of the Hidden City to Open Cluster Management. It provides Claude Code skills that allow you to **hide a managed cluster from all Placement decisions** while **protecting its existing workloads from deletion** — the cluster becomes invisible to scheduling, but everything running on it stays alive.
+Gondolin brings the concept of the Hidden City to Open Cluster Management. It provides Claude Code skills that allow you to **hide a managed cluster from all Placement decisions** while **protecting its existing ManifestWork workloads from deletion** — the cluster becomes invisible to scheduling, but everything running on it stays alive.
 
 This is currently a **skill-based demo** of the behavior. If proven useful, it could be baked into OCM/ACM as a first-class feature.
 
